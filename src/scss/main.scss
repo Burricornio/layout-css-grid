@@ -1,0 +1,33 @@
+// Font families
+$main-font-family: 'Roboto Slab', serif;
+
+// Base color
+$gray-01: #737E87;
+$gray-02: #ECEDED;
+$gray-03: #D6DCDF;
+$gray-04: #51595E;
+$white-01: #ffffff;
+
+// Elements
+$main-font-color: $white-01;
+$header: $gray-01;
+$footer: $gray-01;
+$items-background-color: $gray-03;
+$lateral-menu: $gray-02;
+$lateral-menu-font-color: $gray-04;
+
+
+// Responsive
+$tablet-portrait-width: 768px;
+
+
+// Mixins
+@mixin if-tablet-portrait {
+  @media (min-width: #{$tablet-portrait-width}) {
+      @content;
+  }
+}
+
+@mixin transition($attr: all, $velocity: .3s, $type: linear) {
+  transition: $attr $velocity $type
+}
